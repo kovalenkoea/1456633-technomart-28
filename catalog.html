@@ -58,20 +58,36 @@
         <li><a href="">Перфораторы</a></li>
       </ul>
       <h1>ПЕРФОРАТОРЫ</h1>
-      <fieldset>
-        <legend>ПРОИЗВОДИТЕЛИ:</legend>
-          <label><input type="checkbox" checked name="BOSCH">BOSCH</label>
-          <label><input type="checkbox" name="interskol"/>ИНТЕРСКОЛ</label>
-          <label><input type="checkbox" checked name="makita"/>MAKITA</label>
-          <label><input type="checkbox" name="dewalt"/>DEWALT</label>
-          <label><input type="checkbox" name="hitachi"/>HITACHI</label>
-      </fieldset>
-      <fieldset>
-        <legend>ПИТАНИЕ:</legend>
-          <label><input type="radio" checked name="supply"/>АККУМУЛЯТОРНЫЕ</label>
-          <label><input type="radio" name="supply"/>СЕТЕВЫЕ</label>
-      </fieldset>
-      <button type="submit">Поиск</button>
+      <form class="" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>ЦЕНА:</legend>
+            <!--todo тут должен быть ползунок-->
+            <input type="text" name="min" value="0">
+            <input type="text" name="max" value="30000">
+        </fieldset>
+        <fieldset>
+          <legend>ПРОИЗВОДИТЕЛИ:</legend>
+            <label><input type="checkbox" checked name="BOSCH">BOSCH</label>
+            <label><input type="checkbox" name="interskol"/>ИНТЕРСКОЛ</label>
+            <label><input type="checkbox" checked name="makita"/>MAKITA</label>
+            <label><input type="checkbox" name="dewalt"/>DEWALT</label>
+            <label><input type="checkbox" name="hitachi"/>HITACHI</label>
+        </fieldset>
+        <fieldset>
+          <legend>ПИТАНИЕ:</legend>
+            <label><input type="radio" checked name="battery"/>АККУМУЛЯТОРНЫЕ</label>
+            <label><input type="radio" name="supply"/>СЕТЕВЫЕ</label>
+        </fieldset>
+        <button type="submit">Поиск</button>
+      </form>
+      <section>
+        <h3>СОРТИРОВКА</h3>
+        <button type="button" name="by-cost">ПО ЦЕНЕ</button>
+        <button type="button" name="by-type">ПО ТИПУ</button>
+        <button type="button" name="by-function">ПО ФУНКЦИОНАЛУ</button>
+        <button type="button" name="descending"><img src="" alt="по убыванию"></button>
+        <button type="button" name="ascending"><img src="" alt="по возрастанию"></button>
+      </section>
       <section>
         <ul>
           <li>
@@ -236,6 +252,14 @@
             </span>
           </li>
         </ul>
+      </section>
+      <!--Тут должено быть переключение по страницам-->
+      <section>
+        <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
       </section>
     </main>
     <footer>
