@@ -3,15 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт/Каталог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <!--todo: <h1>H1 потом уберу</h1> -->
-    <section>
-      <h2>ТЕХНОМАРТ</h2>
+    <h1 class="visually-hidden">H1 потом уберу</h1>
+    <section class="up-header">
+      <h2 class="technomart">ТЕХНОМАРТ</h2>
       <p>
-        <button type="button">Поиск</button>
-        <input type="text" name="search" value="" placeholder="Поиск:">
+        <form class="" action="https://echo.htmlacademy.ru" method="get">
+        <label for="search">
+        <button class="search-button" type="submit">Поиск</button>
+        <input type="text" id="search" name="search" value="" placeholder="Поиск:">
+        </label>
+      </form>
       </p>
       <div class="">
         <a href="">Закладки</a>
@@ -39,7 +45,7 @@
         </div>
       </section>
       <nav>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
@@ -95,7 +101,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="boschbfg6000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -113,7 +119,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="boschbfg6000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -131,7 +137,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="boschbfg6000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -149,7 +155,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="boschbfg3000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -167,7 +173,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="boschbfg6000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -185,7 +191,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="boschbfg2000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -202,7 +208,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="boschbfg3000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -220,7 +226,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="boschbfg6000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -238,7 +244,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="boschbfg2000">
             </p>
             <p>
-              <a href="">КУПИТЬ</a>
+              <a href="#added-to-cart">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -313,5 +319,11 @@
       </p>
     </section>
   </footer>
+  <div id="added-to-cart" class="added-to-cart">
+    <h2>Товар добавлен в корзину!</h2>
+    <a href="">Оформить заказ</a>
+    <a href="">Продолжить покупки</a>
+    <a href="">закрыть</a>
+  </div>
 </body>
 </html>
