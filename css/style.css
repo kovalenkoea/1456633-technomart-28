@@ -1,49 +1,103 @@
-body {
-  min-width: 1200px;
-  font-family: Cuprum;
+/* Variables */
+
+:root {
+  /*main colors*/
+  --basic-black: #000000;
+  --basic-red: #EE3643;
+  --basic-white: #ffffff;
+
+  /*header colors*/
+  --header-blue: #293449;
+  --header-green: #63A63E;
+
+  /* header hover colors*/
+  --header-hover-green: #5FBB2D;
+
+  /* header click colors */
+  --header-click-blue: #161D29;
+  --header-click-red: #BA2732;
+
+  /*nav colors*/
+  --nav-main-blue: #32425C;
+  --nav-hover-blue: #293449;
+  --nav-click-blue:  #1D2739;
 }
 
-.up-header {
+
+body {
+  min-width: 1200px;
+  font-family: "Cuprum", Arial; sans-serif;
+}
+
+.page-header {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #293449;
-  outline: 5px solid #ff0000;
-  color: #ffffff;
+  background-color: var(--header-blue);
+  /* outline: 5px solid #ff0000; */
+  color: var(--basic-white);
   height: 42px;
+  margin: 0;
+  padding: 0;
 }
 
-.technomart {
-  background-color: #EE3643;
+.header-logo { /*как сделать ссылкой весь header-logo*/
+  padding: 17px 57px 13px 55px;
+  background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
-.about-site {
+/* .header-logo a {
+  padding: 17px 57px 13px 55px;
+} */
+
+.header-logo:active {
+  background-color: var(--header-click-red);
+}
+
+.header-title {
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
   line-height: 23px;
   display: flex;
   align-items: center;
-  color: #EE3643;
+  color: var(--basic-red);
 }
 
-.up-header a {
+.page-header a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--basic-white);
 }
 
 .site-navigation {
   width: 940px;
   height: 60px;
-  background: #32425C;
+  background: var(--nav-main-blue);
   list-style: none;
-  outline: 5px solid #ff0000;
+  /* outline: 5px solid #ff0000; */
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   box-shadow: inset 0px -5px 0px #293449;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+
+.site-navigation a:hover {
+  /* background-color: var(--nav-hover-blue); */
+  background-color: grey;
 }
 
 .visually-hidden {
@@ -61,5 +115,5 @@ body {
 
 .site-navigation a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--basic-white);
 }

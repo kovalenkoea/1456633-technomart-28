@@ -5,20 +5,21 @@
   <title>Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
   <header>
     <h1 class="visually-hidden">H1 потом уберу</h1>
-    <section class="up-header">
-      <h2 class="technomart">ТЕХНОМАРТ</h2>
-      <p>
-        <form class="search" action="https://echo.htmlacademy.ru" method="get">
-        <label for="search">
-        <button class="visually-hidden" type="submit">Поиск</button>
-        <input type="text" id="search" name="search" value="" placeholder="Поиск:">
+    <section class="page-header">
+      <div class="header-logo">
+        <a href="index.html"><img src="img/logo-technomart.svg" alt="logo-technomart" width="108" height="18"></a>
+      </div>
+      <form class="search" action="https://echo.htmlacademy.ru" method="get">
+        <label>
+          <button class="visually-hidden" type="submit">Поиск</button>
+          <input type="text" name="search" value="" placeholder="Поиск:">
         </label>
       </form>
-      </p>
       <div class="">
         <a href="">Закладки</a>
         <a href="">Корзина</a>
@@ -26,7 +27,7 @@
       <a href="">Оформить заказ</a>
     </section>
     <section>
-      <h3 class="about-site">Интернет-магазин
+      <h3 class="header-title">Интернет-магазин
         строительных материалов
         и инструментов для ремонта</h3>
         <div class="">
@@ -102,7 +103,7 @@
               <img src="img/boschbfg9000.jpg" width="184" height="164" alt="BOSCH BFG 9000">
             </p>
             <p>
-              <a href="#added-to-cart">КУПИТЬ</a>
+              <a href="">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -120,7 +121,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="BOSCH BFG 3000">
             </p>
             <p>
-              <a href="#added-to-cart">КУПИТЬ</a>
+              <a href="">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -138,7 +139,7 @@
               <img src="img/boschbfg6000.jpg" width="144" height="128" alt="BOSCH BFG 6000">
             </p>
             <p>
-              <a href="#added-to-cart">КУПИТЬ</a>
+              <a href="">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -156,7 +157,7 @@
               <img src="img/boschbfg20003000.jpg" width="127" height="112" alt="BOSCH BFG 2000">
             </p>
             <p>
-              <a href="#added-to-cart">КУПИТЬ</a>
+              <a href="">КУПИТЬ</a>
               <a href="">В ЗАКЛАДКИ</a>
             </p>
             <span>
@@ -235,7 +236,7 @@
           <h2>КОНТАКТЫ</h2>
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис:</p>
-            <a href="#big-map"><img src="img/map.png" alt="map" width="300" height="158"></a>
+            <a href=""><img src="img/map.png" alt="map" width="300" height="158"></a>
             <!--todo:<p>ТУТ БУДЕТ КАРТА</p>-->
             <a href="mailto:mail@htmlacademy.ru">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
           </section>
@@ -281,16 +282,16 @@
             <a href="https://htmlacademy.ru">htmlacademy.ru</a>
           </p>
         </section>
-          </footer>
-          <div id="big-map" class="#big-map">
-            <img src="img/big-map.png" alt="карта" width="943" height="449">
-            <a href="">закрыть</a>
-          </div>
-          <div id="added-to-cart" class="added-to-cart">
-            <h2>Товар добавлен в корзину!</h2>
-            <a href="">Оформить заказ</a>
-            <a href="">Продолжить покупки</a>
-            <a href="">закрыть</a>
-          </div>
+      </footer>
+      <div class="#big-map">
+        <img src="img/big-map.png" alt="карта" width="943" height="449">
+        <a href="">закрыть</a>
+      </div>
+      <div class="added-to-cart">
+        <h2>Товар добавлен в корзину!</h2>
+        <a href="">Оформить заказ</a>
+        <a href="">Продолжить покупки</a>
+        <a href="">закрыть</a>
+      </div>
     </body>
     </html>
