@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title>Техномарт/Каталог</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -26,16 +27,14 @@
       </div>
       <a href="">Оформить заказ</a>
     </section>
-    <section>
+    <section class="main-header">
       <h3 class="header-title">Интернет-магазин
         строительных материалов
         и инструментов для ремонта</h3>
-        <div class="">
+        <div class="header-contacts">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петебург, ул. Большая Конюшенная, д.19/8</p>
+          <p class="header-adress">г.﻿﻿ Санкт-Петебург, ул. Большая Конюшенная, д.19/8</p>
         </div>
-      </section>
-      <section>
         <div class="">
           <a href="">Равшан Джамшутович</a>
           <a href="">выход из профиля</a>
@@ -45,7 +44,7 @@
           <a href="">Личный кабинет</a>
         </div>
       </section>
-      <nav>
+      <nav class="navigation">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="">Компания</a></li>
@@ -65,12 +64,32 @@
         <li><a href="">Перфораторы</a></li>
       </ul>
       <h1>ПЕРФОРАТОРЫ</h1>
+      <div class="filters-header">
+        ФИЛЬТР:
+      </div>
       <form class="" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
+        <fieldset class="filter-item">
           <legend>ЦЕНА:</legend>
-          <!--todo тут должен быть ползунок-->
-          <input type="text" name="min" value="0">
-          <input type="text" name="max" value="30000">
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                width: 30%;
+                margin-left: 20%"></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+              left: 20%"></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+              left: 50%"></div>
+            </div>
+            <div class="price-controls">
+
+              <input type="number" name="min-price" value="0">
+              <span class="space-between-price">—</span>
+              <input type="number" name="max-price" value="30000">
+
+            </div>
+          </div>
         </fieldset>
         <fieldset>
           <legend>ПРОИЗВОДИТЕЛИ:</legend>

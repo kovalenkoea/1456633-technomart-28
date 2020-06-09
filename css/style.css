@@ -14,42 +14,50 @@
   --header-hover-green: #5FBB2D;
 
   /* header click colors */
-  --header-click-blue: #161D29;
-  --header-click-red: #BA2732;
+  --header-active-blue: #161D29;
+  --header-active-red: #BA2732;
 
   /*nav colors*/
   --nav-main-blue: #32425C;
   --nav-hover-blue: #293449;
-  --nav-click-blue:  #1D2739;
+  --nav-active-blue:  #1D2739;
 }
 
 
 body {
-  min-width: 1200px;
-  font-family: "Cuprum", Arial; sans-serif;
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+header {
+  background-color: #F3F7F9;
+  padding-bottom: 60px;
+  /* text-align: center; */
 }
 
 .page-header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--header-blue);
-  /* outline: 5px solid #ff0000; */
   color: var(--basic-white);
   height: 42px;
   margin: 0;
   padding: 0;
 }
 
+
+
 .header-logo { /*как сделать ссылкой весь header-logo*/
   padding: 17px 57px 13px 55px;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  margin-left: 130px;
 }
 
 /* .header-logo a {
-  padding: 17px 57px 13px 55px;
+padding: 17px 57px 13px 55px;
 } */
 
 .header-logo:active {
@@ -57,18 +65,76 @@ body {
 }
 
 .header-title {
+  width: 197px;
+  height: 71px;
+  padding: 0;
+  margin-top: 42.5px;
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
   line-height: 23px;
-  display: flex;
   align-items: center;
   color: var(--basic-red);
+
+}
+
+.header-login {
+  list-style: none;
 }
 
 .page-header a {
   text-decoration: none;
   color: var(--basic-white);
+}
+
+.main-header {
+  min-width: 940px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-contacts {
+  width: 273px;
+  height: 48px;
+  text-align: center;
+  background: #F3F7F9;
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  margin-top: 46px;
+  margin-left: 93px;
+  margin-right: 69px;
+  margin-bottom: 3px;
+  align-items: baseline;
+}
+
+.header-contacts a {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+.header-adress {
+  padding: 0;
+  width: 250px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425C;
+  align-items: center;
+  text-align: center;
+  margin-right: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+/*Навигация*/
+
+nav {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .site-navigation {
@@ -116,4 +182,111 @@ body {
 .site-navigation a {
   text-decoration: none;
   color: var(--basic-white);
+}
+
+.filters-header {
+  width: 202px;
+  background-color: #F7F3EC;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  border-radius: 5px;
+  margin: 0;
+  border: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+}
+
+/*фильтр по цене*/
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 220px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  background-color: #F7F3EC;
+  border-radius: 5px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #D7DCDE;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls input {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  width: 80px;
+  padding: 10px;
+  margin-left: 0px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #F7F3EC;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-between-price {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 35px;
 }
