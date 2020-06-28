@@ -63,13 +63,21 @@ header {
   /* text-align: center; */
 }
 
-.page-header {
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.page-header-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--header-blue);
   color: var(--basic-white);
   height: 42px;
+}
+
+.page-header {
+  background-color: var(--header-blue);
   margin-bottom: 49px;
 }
 
@@ -100,13 +108,7 @@ header {
   border: 0px;
 }
 
-
-.place-order {
-  margin-right: 130px;
-}
-
 .place-order a {
-  margin-right: 100px;
   display: flex;
   padding: 9px 16px 9px 19px;
   background-color: var(--header-green);
@@ -199,26 +201,24 @@ header {
   padding: 12px 27px 12px 45px;
 }
 
-.login-button::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 20px;
-  height: 17px;
-  background-image: url("../img/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.3;
-}
-
-
-
 
 .logined-buttons {
   display: flex;
 }
 
+.login-button svg {
+  fill: #c5c5c5;
+}
+
+.login-button:hover svg {
+  fill: red;
+}
+
+.header-contacts a {
+  display: block;
+  width: 270px;
+  text-align: center;
+}
 
 
 .logined-button-profile {
@@ -303,6 +303,7 @@ header {
 
 
 .site-navigation {
+  min-height: 60px;
   width: 940px;
   background: var(--main-blue);
   list-style: none;
@@ -313,6 +314,7 @@ header {
   margin: 0 auto;
   padding-top: 16px;
   padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .site-navigation a {
@@ -870,4 +872,8 @@ header {
   font-size: 13px;
   line-height: 18px;
   text-decoration: none;
+}
+
+.modal-map {
+  display: none;
 }
