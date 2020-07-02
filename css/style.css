@@ -73,7 +73,7 @@ header {
 
 .page-header-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   color: var(--basic-white);
   height: 42px;
@@ -98,14 +98,26 @@ header {
   width: 271px;
   display: flex;
   align-items: center;
+  position: relative;
+  margin-left: 17px;
+}
+
+.search-form svg {
+  fill: var(--basic-white);
+  position: absolute;
+}
+
+.search-form:focus svg {
+  fill: red;
 }
 
 .search-form-input {
   background-color: var(--header-blue);
   border: 0;
-  width: 100%;
+  width: 271px;
   height: 42px;
   outline: none;
+  padding-left: 42px;
 }
 
 
@@ -201,6 +213,10 @@ color: color: rgba(255, 255, 255, 0.5);
 .cart:hover::before,
 .bookmarks:hover::before {
   opacity: 1;
+}
+
+.bookmarks-cart {
+  margin-left: auto;
 }
 
 .bookmarks-cart a {
@@ -377,12 +393,6 @@ color: color: rgba(255, 255, 255, 0.5);
   margin-bottom: 66px;
 }
 
-.main-info p,
-.main-info a,
-.main-info h2 {
-  margin-left: 23px;
-}
-
 .materials {
   grid-area: main-1;
 
@@ -428,6 +438,11 @@ color: color: rgba(255, 255, 255, 0.5);
   background-color: var(--basic-red);
 }
 
+.slider-text {
+  padding-left: 23px;
+  padding-top: 23px;
+}
+
 .popular-header {
   position: relative;
   max-width: 940px;
@@ -438,6 +453,8 @@ color: color: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 28px;
+  padding-right: 19px;
 }
 
 
@@ -559,19 +576,13 @@ color: color: rgba(255, 255, 255, 0.5);
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0;
-  margin: 0;
   margin-bottom: 25px;
-
-}
-
-.catalog-item {
-  width: 220px;
-  min-height: 318px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  border: 1px solid var(--cards-border);
-  box-sizing: border-box;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  list-style: none;
 }
 
 .catalog-item:nth-child(3n) {
@@ -590,18 +601,17 @@ color: color: rgba(255, 255, 255, 0.5);
 
 
 
-.cards,
-.catalog-item {
+.cards {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   text-align: center;
+  height: 318px;
   width: 220px;
   border: 1px solid var(--cards-border);
   box-sizing: border-box;
   position: relative;
 }
-
 
 .item-name {
   font-family: "PT Sans", Arial, sans-serif;
@@ -667,6 +677,7 @@ color: color: rgba(255, 255, 255, 0.5);
 .about-perforators h3 {
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
 }
 
 .slide-hidden {
@@ -789,6 +800,7 @@ color: color: rgba(255, 255, 255, 0.5);
 .company-information-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 66px;
 }
 
 .company-information {
@@ -820,6 +832,10 @@ color: color: rgba(255, 255, 255, 0.5);
   color: var(--basic-white);
   text-decoration: none;
   margin-left: 59px;
+}
+
+.footer-links li:first-child a {
+  margin-left: 0;
 }
 
 .footer-links a:hover {
@@ -948,13 +964,25 @@ color: color: rgba(255, 255, 255, 0.5);
 }
 
 .services {
-  background-color: var(--secrvices-background);
+  min-height: 522px;
+  background: var(--secrvices-background) url("../img/delivery-truck.png") no-repeat 601px 257px;
   margin-bottom: 66px;
 }
 
-.company-information h3,
-.map-contacts h3 {
-  margin-top: 0;
+.services-list {
+  list-style: none;
+}
+
+.service-block {
+  display: flex;
+}
+
+.service-delivery {
+
+}
+
+.hidden-service {
+  display: none;
 }
 
 .footer-top-wrapper {
@@ -995,5 +1023,4 @@ color: color: rgba(255, 255, 255, 0.5);
 
 
 .social-button svg {
-
 }
