@@ -90,6 +90,10 @@ header {
   box-shadow: inset 0 -5px 0 var(--header-logo-shadow);
 }
 
+.header-logo:active a {
+  background-color: #BA2732;
+}
+
 .header-logo:active {
   background-color: var(--header-click-red);
 }
@@ -99,17 +103,25 @@ header {
   display: flex;
   align-items: center;
   position: relative;
-  margin-left: 17px;
 }
 
 .search-form svg {
   fill: var(--basic-white);
   position: absolute;
+  opacity: 0.3;
+  top: 12px;
+  left: 17px;
 }
 
-.search-form:focus svg {
+.search-form:focus-within svg {
+  opacity: 1;
   fill: red;
 }
+
+.search-form:hover svg {
+  opacity: 1;
+}
+
 
 .search-form-input {
   background-color: var(--header-blue);
@@ -126,6 +138,11 @@ header {
   border: 0px;
 }
 
+.search-form-input::-webkit-input-placeholder {color: var(--basic-white); opacity:1;}/* webkit */
+.search-form-input::-moz-placeholder          {color: var(--basic-white); opacity:1;}/* Firefox 19+ */
+.search-form-input:-moz-placeholder           {color: var(--basic-white); opacity:1;}/* Firefox 18- */
+.search-form-input:-ms-input-placeholder      {color: var(--basic-white); opacity:1;}/* IE */
+
 .place-order a {
   display: flex;
   padding: 9px 16px 9px 19px;
@@ -133,8 +150,8 @@ header {
 }
 
 .place-order a:active {
-background-color: var(--header-darkgreen);
-color: color: rgba(255, 255, 255, 0.5);
+  background-color: var(--header-darkgreen);
+  color: color: rgba(255, 255, 255, 0.5);
 }
 
 .header-title {
@@ -224,6 +241,10 @@ color: color: rgba(255, 255, 255, 0.5);
   padding: 20px;
 }
 
+.bookmarks {
+  margin-right: 50px;
+}
+
 .bookmarks-cart a:active {
   background-color: var(--header-active-blue);
 }
@@ -238,12 +259,13 @@ color: color: rgba(255, 255, 255, 0.5);
 }
 
 .login-button svg {
-  fill: #c5c5c5;
+  fill: var(--login-active);
 }
 
 .login-button:hover svg {
-  fill: red;
+  fill: #3D546F;
 }
+
 
 .header-contacts a {
   display: block;
@@ -397,7 +419,7 @@ color: color: rgba(255, 255, 255, 0.5);
   grid-area: main-1;
 
   background: url("../img/icon-new.svg") no-repeat right top,
-              url("../img/icon-1.svg") no-repeat 213px 31px;
+  url("../img/icon-1.svg") no-repeat 213px 31px;
   background-color: var(--index-materials);
 }
 
@@ -440,8 +462,25 @@ color: color: rgba(255, 255, 255, 0.5);
 
 .slider-text {
   padding-left: 23px;
-  padding-top: 23px;
+  position: relative;
 }
+
+.slider-text p {
+  margin-top: 14px;
+}
+
+.slide-perforators,
+.slide-drills {
+  padding-top: 23px;
+  padding-left: 24px;
+}
+
+.slide-perforators {
+  background: url(../img/perforators.jpg) no-repeat;
+  height: 100%;
+}
+
+
 
 .popular-header {
   position: relative;
@@ -467,6 +506,27 @@ color: color: rgba(255, 255, 255, 0.5);
   color: var(--basic-white);
 }
 
+.main-info-button {
+  text-align: center;
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 135px;
+  background-color: rgba(255, 255, 255, 0.3);;
+}
+
+.main-info-button:hover {
+  background-color: var(--login-active);
+  opacity: 0.3;
+  color: rgba(255,255,255,1);
+}
+
+.main-info-button:active {
+  background-color: #A9A9A9;;
+  opacity: 0.3;
+  color: rgba(255,255,255,1);
+}
+
 .popular-header a {
   padding: 11px 24px 9px 24px;
   background-color: var(--basic-red);
@@ -489,10 +549,6 @@ color: color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0;
 }
 
-.slide-perforators {
-  background-image: url(../img/perforators.jpg);
-  height: 100%;
-}
 
 
 
@@ -973,8 +1029,17 @@ color: color: rgba(255, 255, 255, 0.5);
   list-style: none;
 }
 
+
+.services-list a {
+  background: #32425C;
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  text-decoration: none;
+}
+
+
 .service-block {
   display: flex;
+  justify-content: flex-start;
 }
 
 .service-delivery {
